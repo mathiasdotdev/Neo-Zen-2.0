@@ -1,5 +1,6 @@
 @media not (-moz-pref("neo-theme-urlbar-disabled")) {
-  .urlbar-input {
+  .urlbar-input,
+  #urlbar[open] .urlbar-input {
     text-align: center !important;
   }
 
