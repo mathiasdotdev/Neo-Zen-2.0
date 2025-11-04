@@ -22,10 +22,11 @@
           }
 
           & .zen-current-workspace-indicator-name {
+            display: inline !important;
             text-align: center !important;
             min-width: 50% !important;
             max-width: 50% !important;
-            margin-left: 24.8% !important;
+            margin-left: 24.3% !important;
             margin-right: auto !important;
 
             opacity: 1 !important;
