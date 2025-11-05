@@ -52,7 +52,10 @@
       color: rgba(0, 0, 0, 0) !important;
       font-size: 0px !important;
 
-      transition: opacity 0.5s ease, background-color 0.5s ease, box-shadow 0.7s ease, scale 0.5s ease, width 0.3s ease !important;
+      /* Optimized: Removed box-shadow (expensive) and width (causes reflow) from transition */
+      will-change: transform, opacity, background-color;
+      contain: layout style;
+      transition: opacity 0.5s ease, background-color 0.5s ease, scale 0.5s ease, transform 0.3s ease !important;
     }
   }
 }

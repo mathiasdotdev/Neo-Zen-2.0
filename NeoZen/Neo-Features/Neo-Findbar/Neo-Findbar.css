@@ -21,7 +21,10 @@
                 top: auto !important;
                 padding-left: 5px !important;
 
-                transition: bottom 0.5s ease, opacity 0.5s ease, border-radius 0.5s ease, height 0.5s ease, width 0.5s ease !important;
+                /* Optimized: Use transform instead of layout properties when possible */
+                will-change: transform, opacity;
+                contain: layout;
+                transition: opacity 0.5s ease, border-radius 0.5s ease, transform 0.5s ease !important;
 
                 & .findbar-container {
                     display: flex !important;
