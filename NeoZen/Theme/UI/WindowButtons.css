@@ -16,8 +16,8 @@
                 transition: all 200ms ease-in-out;
             }
 
-            .titlebar-button>image {
-                visibility: hidden !important;
+            .titlebar-button {
+                color: transparent !important;
             }
 
             .titlebar-buttonbox {
