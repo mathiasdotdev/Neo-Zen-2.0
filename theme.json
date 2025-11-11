@@ -8,8 +8,8 @@
   "createdAt": "2025-05-31",
   "updatedAt": "2025-07-12",
   "style": {
-    "chrome": "https://raw.githubusercontent.com/mathiasdotdev/Neo-Zen-2.0/refs/heads/main/userChrome.css",
-    "content": "https://raw.githubusercontent.com/mathiasdotdev/Neo-Zen-2.0/refs/heads/main/userContent.css"
+    "chrome": "https://raw.githubusercontent.com/mathiasdotdev/Neo-Zen-2.0/refs/heads/canary/userChrome.css",
+    "content": "https://raw.githubusercontent.com/mathiasdotdev/Neo-Zen-2.0/refs/heads/canary/userContent.css"
   },
   "preferences": "https://raw.githubusercontent.com/mathiasdotdev/Neo-Zen-2.0/refs/heads/main/preferences.json",
   "readme": "https://raw.githubusercontent.com/mathiasdotdev/Neo-Zen-2.0/refs/heads/main/README.md",
