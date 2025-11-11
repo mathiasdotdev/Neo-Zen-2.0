@@ -89,11 +89,11 @@ this can be enabled or disabled using the advanced options in "about:config" */
   /* --------------------- Tab Switch Animation --------------------- */
   #tabbrowser-tabpanels>hbox:not(:has(.zen-glance-background)):not([zen-split="true"]) {
     &:is([zen-split]) {
-      transition: all 0.17s cubic-bezier(0.175, 0.685, 0.52, 1.05), filter 0.1s ease-out !important;
+      transition: scale 0.17s cubic-bezier(0.175, 0.685, 0.52, 1.05), opacity 0.17s cubic-bezier(0.175, 0.685, 0.52, 1.05), filter 0.1s ease-out !important;
     }
 
     &:not(.zen-glance-background):not([zen-split="true"]) {
-      transition: all 0.17s cubic-bezier(0.175, 0.685, 0.52, 1), filter 0.1s ease-out !important;
+      transition: scale 0.17s cubic-bezier(0.175, 0.685, 0.52, 1), opacity 0.17s cubic-bezier(0.175, 0.685, 0.52, 1), filter 0.1s ease-out !important;
       scale: 0.975 !important;
       opacity: 1;
       filter: blur(5px) !important;
@@ -111,11 +111,11 @@ this can be enabled or disabled using the advanced options in "about:config" */
   @media (-moz-pref("nebula-tab-switch-animation", 2)) {
     #tabbrowser-tabpanels>hbox:not(:has(.zen-glance-background)):not([zen-split="true"]) {
       &:is([zen-split]) {
-        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.35), filter 0.18s ease-out !important;
+        transition: scale 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.35), opacity 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.35), filter 0.18s ease-out !important;
       }
 
       &:not(.zen-glance-background):not([zen-split="true"]) {
-        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.35), filter 0.18s ease-out !important;
+        transition: scale 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.35), opacity 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.35), filter 0.18s ease-out !important;
         scale: 0.95 !important;
         opacity: 1;
         filter: blur(20px) !important;
@@ -134,11 +134,11 @@ this can be enabled or disabled using the advanced options in "about:config" */
   @media (-moz-pref("nebula-tab-switch-animation", 3)) {
     #tabbrowser-tabpanels>hbox:not(:has(.zen-glance-background)):not([zen-split="true"]) {
       &:is([zen-split]) {
-        transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.35), filter 0.1s ease-out !important;
+        transition: scale 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.35), opacity 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.35), filter 0.1s ease-out !important;
       }
 
       &:not(.zen-glance-background):not([zen-split="true"]) {
-        transition: all 0.2s cubic-bezier(0.175, 0.85, 0.52, 1.35), filter 0.18s ease-out !important;
+        transition: scale 0.2s cubic-bezier(0.175, 0.85, 0.52, 1.35), opacity 0.2s cubic-bezier(0.175, 0.85, 0.52, 1.35), filter 0.18s ease-out !important;
         scale: 0.98 !important;
         opacity: 1;
         filter: blur(5px) !important;
@@ -197,12 +197,12 @@ this can be enabled or disabled using the advanced options in "about:config" */
 
   /* website view animations [works for split tabs] */
   #browser:not(:has(.zen-glance-background)) #tabbrowser-tabpanels {
-    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.35) !important;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.35), opacity 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.35) !important;
   }
 
   /* trackpad gestures*/
   tabpanels .browserStack browser {
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.1) 0.1s !important;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.1) 0.1s, scale 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.1) 0.1s !important;
 
   }
 
@@ -226,7 +226,7 @@ this can be enabled or disabled using the advanced options in "about:config" */
   /* ctrl tab visuals and animations */
   #ctrlTab-panel {
     --panel-background: rgba(0, 0, 0, 0.9) !important;
-    transition: all 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.1) 0.2s !important;
+    transition: scale 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.1) 0.2s, opacity 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.1) 0.2s !important;
     border-radius: 13px;
     scale: 0.7;
   }
@@ -244,7 +244,7 @@ this can be enabled or disabled using the advanced options in "about:config" */
   .ctrlTab-preview-inner {
     /* 	padding: 0 !important; */
     margin: 0 !important;
-    transition: all 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out, scale 0.2s ease-in-out, border-radius 0.2s ease-in-out;
 
     .ctrlTab-canvas {
       border-radius: 1em !important;
@@ -257,11 +257,11 @@ this can be enabled or disabled using the advanced options in "about:config" */
 
     .ctrlTab-favicon-container {
       justify-content: center !important;
-      transition: all 0.5s ease-in-out;
+      transition: transform 0.5s ease-in-out, scale 0.5s ease-in-out;
 
       image {
         border-radius: 50% !important;
-        transition: all 0.5s ease-in-out !important;
+        transition: scale 0.5s ease-in-out, padding 0.5s ease-in-out !important;
         /* 			scale: 1.25 !important; */
       }
     }

@@ -13,7 +13,7 @@
                 border-radius: 50px;
                 margin: auto 3px !important;
                 background-color: rgba(200, 200, 200, 0.3) !important;
-                transition: all 200ms ease-in-out;
+                transition: min-height 200ms ease-in-out, background-color 200ms ease-in-out, box-shadow 200ms ease-in-out;
             }
 
             .titlebar-button {

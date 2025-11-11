@@ -5,6 +5,9 @@
     @media not (-moz-pref("neo-features-search-disabled")) {
         @media (-moz-pref("zen.urlbar.behavior", "float")) {
             #urlbar {
+                /* Optimized: Add will-change for better performance */
+                will-change: top, width;
+                contain: layout;
                 transition: top 0.5s ease,
                     width 0.5s ease;
             }

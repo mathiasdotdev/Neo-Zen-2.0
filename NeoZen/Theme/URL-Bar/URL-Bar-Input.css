@@ -63,7 +63,7 @@
       transform: translateX(100%);
       opacity: 0;
       width: auto !important;
-      transition: all 0.3s ease;
+      transition: transform 0.3s ease, opacity 0.3s ease;
     }
 
     #urlbar:not([open]):hover #userContext-icons,
